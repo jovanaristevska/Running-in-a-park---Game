@@ -1,0 +1,42 @@
+[gd_scene load_steps=2 format=3 uid="uid://b8jj5oko3v8yv"]
+
+[ext_resource type="Script" path="res://game_over_screen.gd" id="1_ehva6"]
+
+[node name="GameOverScreen" type="Control"]
+self_modulate = Color(0.760784, 0.847059, 0.615686, 1)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ehva6")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1148.0
+offset_bottom = 649.0
+color = Color(0.168627, 0.141176, 0.317647, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 361.0
+offset_top = 18.0
+offset_right = 822.0
+offset_bottom = 159.0
+theme_override_colors/font_color = Color(0.952941, 0, 0, 1)
+theme_override_font_sizes/font_size = 45
+text = "GAME OVER!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 466.0
+offset_top = 308.0
+offset_right = 711.0
+offset_bottom = 361.0
+theme_override_font_sizes/font_size = 24
+text = "Try Again"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
